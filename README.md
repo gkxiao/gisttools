@@ -26,6 +26,9 @@ Optional dependencies (only for some functionality):
 * gridDataFormats (for loading .dx files)
 
 You should be able to install gisttools in a local environment using `pip install .`. gisttools has been tested mainly on Pyton 3.7, but all versions >= 3.6 *should* work, so If you experience errors with any of those versions, feel free to contact me.
+<h2>Mean energy per water and number density for various water models<sup>1</sup></h2>
+<img src="https://github.com/gkxiao/gisttools/blob/main/3max.png"  alt="Mean energy per water">
+<p>(1) Ramsey, S.; Nguyen, C.; Salomon-Ferrer, R.; Walker, R. C.; Gilson, M. K.; Kurtzman, T. Solvation Thermodynamic Mapping of Molecular Surfaces in AmberTools: GIST. J. Comput. Chem. 2016, 37 (21), 2029–2037. https://doi.org/10.1002/jcc.24417.</p>
 <h2>Examples</h2>
 <h3>Export g_O as a dx file</h3>
 <pre line="1" lang="python">
@@ -38,6 +41,6 @@ from numpy.testing import assert_array_equal, assert_allclose
 import pandas as pd
 import pytest
 
-example1 = gist.load_gist_file('/public/gkxiao/software/gisttools/tests/example_gist_5000frames.dat', n_frames=5000, eww_ref=-9.533)
-example1.save_dx('g_O','/public/gkxiao/software/gisttools/tests/g_O.dx')
+example1 = gist.load_gist_file('example/benzene/out.dat', eww_ref=-9.533)
+example1.save_dx('g_O','example/benzene/g_O.dx')
 </pre>
