@@ -26,8 +26,8 @@ Optional dependencies (only for some functionality):
 * gridDataFormats (for loading .dx files)
 
 You should be able to install gisttools in a local environment using `pip install .`. gisttools has been tested mainly on Pyton 3.7, but all versions >= 3.6 *should* work, so If you experience errors with any of those versions, feel free to contact me.
-<h2>examples</h2>
-<h3>save GIST results g_O as a dx file</h3>
+<h2>Examples</h2>
+<h3>Export g_O as a dx file</h3>
 <pre line="1" lang="python">
 #!/usr/bin/env python3
 import gisttools.gist as gist
@@ -38,6 +38,6 @@ from numpy.testing import assert_array_equal, assert_allclose
 import pandas as pd
 import pytest
 
-example1 = gist.load_gist_file('tests/example_gist_5000frames.dat', n_frames=5000, eww_ref=-9.533)
-example1.save_dx('g_O','tests/g_O.dx')
+example1 = gist.load_gist_file('/public/gkxiao/software/gisttools/tests/example_gist_5000frames.dat', n_frames=5000, eww_ref=-9.533)
+example1.save_dx('g_O','/public/gkxiao/software/gisttools/tests/g_O.dx')
 </pre>
