@@ -62,7 +62,7 @@ array([0.00361614])
 <pre line="1" lang="python">
 >>> from gridData import Grid
 >>> g =  Grid("G:/work/3oot_gist/Local_unhappy_water.dx")
->>> #3oot xtal-ligand(b1i5k)-O33
+>>> # PDB 3OOT xtal-ligand O33 (oxygen of the HBD) 
 >>> dG_O33 = dG.interpolated(-8.43,-28.11,-4.07)
 >>> print('dG =',dG_O33,'kcal/mol')
 dG = [1.52537911] kcal/mol
