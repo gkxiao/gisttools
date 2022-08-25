@@ -45,7 +45,7 @@ example1 = gist.load_gist_file('example/benzene/out.dat', eww_ref=-9.533)
 example1.save_dx('g_O','example/benzene/g_O.dx')
 </pre>
 <h3>show &Delta;G at a coordination point</h3>
-<img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist.png">
+<img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist.png" width="450" height="172">
 <pre line="1" lang="python">
 >>> from gridData import Grid
 >>> g =  Grid("local_dG.dx")
