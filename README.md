@@ -61,7 +61,7 @@ array([0.00361614])
 <img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist_feature_score.png" width="400" height="363">
 <pre line="1" lang="python">
 >>> from gridData import Grid
->>> g =  Grid("G:/work/3oot_gist/Local_unhappy_water.dx")
+>>> dG =  Grid("G:/work/3oot_gist/Local_unhappy_water.dx")
 >>> # PDB 3OOT xtal-ligand O33 (oxygen of the HBD) 
 >>> dG_O33 = dG.interpolated(-8.43,-28.11,-4.07)
 >>> print('dG =',dG_O33,'kcal/mol')
