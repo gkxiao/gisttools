@@ -57,7 +57,7 @@ array([-0.23544697])
 array([0.00361614])
 >>>
 </pre>
-<h3>Score a pharmacophore feature</h3>
+<h3 id="ph4">Score a pharmacophore feature</h3>
 <img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist_feature_score.png" width="400" height="363">
 <pre line="1" lang="python">
 >>> from gridData import Grid
