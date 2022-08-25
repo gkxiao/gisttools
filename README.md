@@ -44,7 +44,7 @@ import pytest
 example1 = gist.load_gist_file('example/benzene/out.dat', eww_ref=-9.533)
 example1.save_dx('g_O','example/benzene/g_O.dx')
 </pre>
-<h3>using &Delta;G grid to score a coordination</h3>
+<h3>show &Delta;G grid at coordination</h3>
 <img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist.png">
 <pre line="1" lang="python">
 >>> from gridData import Grid
