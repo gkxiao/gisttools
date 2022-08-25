@@ -27,7 +27,7 @@ Optional dependencies (only for some functionality):
 
 You should be able to install gisttools in a local environment using `pip install .`. gisttools has been tested mainly on Pyton 3.7, but all versions >= 3.6 *should* work, so If you experience errors with any of those versions, feel free to contact me.
 <h2>Mean energy per water and number density for various water models<sup>1</sup></h2>
-<img src="https://github.com/gkxiao/gisttools/blob/master/mean-energy-per-water.png"  alt="Mean energy per water">
+<img src="https://github.com/gkxiao/gisttools/blob/master/mean-energy-per-water.png"  alt="Mean energy per water"  width="450" height="172">
 <p>(1) Ramsey, S.; Nguyen, C.; Salomon-Ferrer, R.; Walker, R. C.; Gilson, M. K.; Kurtzman, T. Solvation Thermodynamic Mapping of Molecular Surfaces in AmberTools: GIST. J. Comput. Chem. 2016, 37 (21), 2029–2037. https://doi.org/10.1002/jcc.24417.</p>
 <h2>Examples</h2>
 <h3>Export g_O as a dx file</h3>
@@ -45,7 +45,7 @@ example1 = gist.load_gist_file('example/benzene/out.dat', eww_ref=-9.533)
 example1.save_dx('g_O','example/benzene/g_O.dx')
 </pre>
 <h3>show &Delta;G at a coordination point</h3>
-<img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist.png" width="450" height="172">
+<img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist.png">
 <pre line="1" lang="python">
 >>> from gridData import Grid
 >>> g =  Grid("local_dG.dx")
