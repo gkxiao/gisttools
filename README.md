@@ -44,3 +44,16 @@ import pytest
 example1 = gist.load_gist_file('example/benzene/out.dat', eww_ref=-9.533)
 example1.save_dx('g_O','example/benzene/g_O.dx')
 </pre>
+<h3>using &Delta;G grid to score a coordination</h3>
+
+<pre line="1" lang="python">
+>>> from gridData import Grid
+>>> g =  Grid("local_unhappy_water.dx")
+>>> g.interpolated(77.363,25.254,44.668)
+array([0.73119007])
+>>> g.interpolated(77.882,28.203,40.039)
+array([-0.23544697])
+>>> g.interpolated(77.46,24.744,40.978)
+array([0.00361614])
+>>>
+</pre>
