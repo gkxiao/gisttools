@@ -69,6 +69,7 @@ dG = [1.52537911] kcal/mol
 >>>
 </pre>
 <h3>Return water density at a coordination point</h3>
+<p>Show water density on coordination point (-12.305, 42.442, 9.476) and (-9.244, 45.091, 6.068).</p>
 <pre line="1" lang="python">
 > dx_at_coord.py 1ke8_3drism_density.dx -12.305 42.442 9.476
 -12.305 42.442 9.476 0.30545268630371786
