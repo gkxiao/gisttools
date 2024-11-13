@@ -30,33 +30,6 @@ You should be able to install gisttools in a local environment using `pip instal
 <img src="https://github.com/gkxiao/gisttools/blob/master/mean-energy-per-water.png"  alt="Mean energy per water"  width="450" height="172">
 <p>(1) Ramsey, S.; Nguyen, C.; Salomon-Ferrer, R.; Walker, R. C.; Gilson, M. K.; Kurtzman, T. Solvation Thermodynamic Mapping of Molecular Surfaces in AmberTools: GIST. J. Comput. Chem. 2016, 37 (21), 2029–2037. https://doi.org/10.1002/jcc.24417.</p>
 <h2>Examples</h2>
-<h3>Export g_O as a dx file</h3>
-<pre line="1" lang="python">
-#!/usr/bin/env python3
-import gisttools.gist as gist
-from io import StringIO
-from textwrap import dedent
-import numpy as np
-from numpy.testing import assert_array_equal, assert_allclose
-import pandas as pd
-import pytest
-
-example1 = gist.load_gist_file('example/benzene/out.dat', eww_ref=-9.533)
-example1.save_dx('g_O','example/benzene/g_O.dx')
-</pre>
-<h3>show &Delta;G at a coordination point</h3>
-<img src="https://github.com/gkxiao/gisttools/blob/master/example/benzene/gist.png">
-<pre line="1" lang="python">
->>> from gridData import Grid
->>> g =  Grid("local_dG.dx")
->>> g.interpolated(77.363,25.254,44.668)
-array([0.73119007])
->>> g.interpolated(77.882,28.203,40.039)
-array([-0.23544697])
->>> g.interpolated(77.46,24.744,40.978)
-array([0.00361614])
->>>
-</pre>
 
 <h2>Reference</h2>
 <ol>
