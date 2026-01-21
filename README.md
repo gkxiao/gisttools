@@ -42,7 +42,7 @@ You should be able to install gisttools in a local environment using `pip instal
 
 https://github.com/liedllab/gist-tutorial
 
-## a demo calculate &Delta;G and export to a dx file
+## a demo to calculate &Delta;G and export to a dx file
 Here’s a full Python code example showing how to carry out this process. The code is based on the docs examples and has key comments included.
 
 ```
