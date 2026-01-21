@@ -19,3 +19,4 @@ python extract_frame.py
 ```
 python export_dg.py
 ```
+I have encountered an issue at present ： https://github.com/liedllab/gist-tutorial/issues/81
