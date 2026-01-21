@@ -16,7 +16,7 @@ print(f"Reference density: {gist.rho0}")
 # The A_dens column represents the free energy density (ΔA_solv_dens) of each voxel, in units of kcal/mol/Å³
 
 # Step 3: Optional step - Handle entropy reference (adjustment may be needed if free energy convergence is poor)
-# Section 4.4.4 of the documentation mentions that entropy may diverge due to sampling bias and can be corrected by referencing a reference value
+# Section 4.4.4 of the tutoral mentions that entropy may diverge due to sampling bias and can be corrected by referencing a reference value
 def reference_entropy(gf):
     if 'dTSsix_unref_norm' not in gf.data.columns:
         gf['dTSsix_unref_norm'] = gf['dTSsix_norm']
