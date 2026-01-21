@@ -44,6 +44,9 @@ https://github.com/liedllab/gist-tutorial
 
 ## an example to export &Delta;G.dx file
 ```
+# 导入GISTTOOLS包
+import sys
+sys.path.append('/public/gkxiao/work/gist/gisttools')
 # 导入必要的库
 from gisttools.gist import load_gist_file
 import gisttools as gt  # 可选，用于别名
@@ -78,6 +81,15 @@ gist.save_dx('A_dens', 'deltaG_density.dx')
 
 print("DX文件已导出为 deltaG_density.dx")
 ```
+
+Should adjustments to the free energy calculation be necessary—for instance, the application of an entropy scaling factor of 0.6 (refer to Section 4.4.6)—please reconfigure the data columns prior to export.
+```
+# 示例：缩放熵贡献（第一阶熵乘以0.6）
+gist['dTSsix_scaled_dens'] = gist['dTSsix_dens'] * 0.6
+gist['A_scaled_dens'] = gist['Esw_dens'] + gist['Eww_dens'] - gist['dTSsix_scaled_dens']
+gist.save_dx('A_scaled_dens', 'deltaG_scaled.dx')
+```
+
 
 <h2>Reference</h2>
 <ol>
