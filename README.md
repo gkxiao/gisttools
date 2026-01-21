@@ -42,7 +42,7 @@ You should be able to install gisttools in a local environment using `pip instal
 
 https://github.com/liedllab/gist-tutorial
 
-## an example to export \(\Delta G\).dx file
+## an example to export &Delta;G.dx file
 ```
 # 导入必要的库
 from gisttools.gist import load_gist_file
