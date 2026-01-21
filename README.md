@@ -27,9 +27,6 @@ Optional dependencies (only for some functionality):
 
 You should be able to install gisttools in a local environment using `pip install .`. gisttools has been tested mainly on Pyton 3.7, but all versions >= 3.6 *should* work, so If you experience errors with any of those versions, feel free to contact me.
 <h2>Mean energy per water and number density for various water models<sup>1</sup></h2>
-<img src="https://github.com/gkxiao/gisttools/blob/master/mean-energy-per-water.png"  alt="Mean energy per water"  width="450" height="172">
-
-# Table S2. Mean energy per water and number density for various water models.
 
 | Water Model | Mean Energy (E<sub>ww</sub>-norm kcal/mol) | Number density (1/Å³) |
 | :--- | :--- | :--- |
