@@ -28,6 +28,19 @@ Optional dependencies (only for some functionality):
 You should be able to install gisttools in a local environment using `pip install .`. gisttools has been tested mainly on Pyton 3.7, but all versions >= 3.6 *should* work, so If you experience errors with any of those versions, feel free to contact me.
 <h2>Mean energy per water and number density for various water models<sup>1</sup></h2>
 <img src="https://github.com/gkxiao/gisttools/blob/master/mean-energy-per-water.png"  alt="Mean energy per water"  width="450" height="172">
+
+# Table S2. Mean energy per water and number density for various water models.
+
+| Water Model | Mean Energy (E<sub>ww</sub>-norm kcal/mol) | Number density (1/Å³) |
+| :--- | :--- | :--- |
+| TIP3P | -9.533 | 0.0329 |
+| TIP4PEW | -11.036 | 0.0332 |
+| TIP4P | -9.856 | 0.0332 |
+| TIP5P | -9.596 | 0.0329 |
+| TIP3PFW | -11.369 | 0.0334 |
+| SPCE | -11.123 | 0.0333 |
+| SPCFW | -11.873 | 0.0329 |
+
 <p>(1) Ramsey, S.; Nguyen, C.; Salomon-Ferrer, R.; Walker, R. C.; Gilson, M. K.; Kurtzman, T. Solvation Thermodynamic Mapping of Molecular Surfaces in AmberTools: GIST. J. Comput. Chem. 2016, 37 (21), 2029–2037. https://doi.org/10.1002/jcc.24417.</p>
 <h2>Examples</h2>
 
