@@ -40,6 +40,7 @@ You should be able to install gisttools in a local environment using `pip instal
 
 <h2>Tutorial</h2>
 
+https://github.com/liedllab/gist-tutorial
 
 <h2>Reference</h2>
 <ol>
