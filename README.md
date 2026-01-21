@@ -42,6 +42,43 @@ You should be able to install gisttools in a local environment using `pip instal
 
 https://github.com/liedllab/gist-tutorial
 
+## an example to export \(\Delta G\).dx file
+```
+# 导入必要的库
+from gisttools.gist import load_gist_file
+import gisttools as gt  # 可选，用于别名
+
+# 步骤1: 加载GIST输出文件和溶质结构
+# 假设gist.dat是GIST输出文件，solute-centered.pdb是溶质结构文件
+# 设置参考能量eww_ref（根据溶剂模型选择，例如TIP3P水模型为-9.5398）
+gist = load_gist_file('gist.dat', struct='solute-centered.pdb', eww_ref=-9.5398)
+
+# 步骤2: 检查数据加载是否正确（可选）
+print(f"帧数: {gist.n_frames}")
+print(f"参考密度: {gist.rho0}")
+# 确保A_dens列已自动计算（GISTTOOLS会从Eww、Esw和熵列推导出A_dens）
+# A_dens列表示每个体素的自由能密度（ΔA_solv_dens），单位是kcal/mol/Å³
+
+# 步骤3: 可选步骤——处理熵参考（如果自由能收敛不理想，可能需要调整熵参考）
+# 文档第4.4.4节提到，熵可能因采样偏差而发散，可引用参考值校正
+def reference_entropy(gf):
+    if 'dTSsix_unref_norm' not in gf.data.columns:
+        gf['dTSsix_unref_norm'] = gf['dTSsix_norm']
+        gf['dTSsix_unref_dens'] = gf['dTSsix_dens']
+    refval = gf.detect_reference_value('dTSsix_unref_dens')
+    gf['dTSsix_norm'] = gf.get_referenced('dTSsix_unref_norm', refval)
+    gf['dTSsix_dens'] = gf.get_referenced('dTSsix_unref_dens', refval)
+
+# 应用熵参考校正（如果需要）
+reference_entropy(gist)
+
+# 步骤4: 导出A_dens列为DX文件
+# 使用save_dx方法，第一个参数是列名（'A_dens'），第二个是输出文件名
+gist.save_dx('A_dens', 'deltaG_density.dx')
+
+print("DX文件已导出为 deltaG_density.dx")
+```
+
 <h2>Reference</h2>
 <ol>
    <li>Hu, B.; Lill, M. A. Protein Pharmacophore Selection Using Hydration-Site Analysis. J. Chem. Inf. Model. 2012, 52 (4), 1046–1060. https://doi.org/10.1021/ci200620h.</li>
