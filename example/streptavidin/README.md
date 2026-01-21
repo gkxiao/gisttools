@@ -1,3 +1,4 @@
+# Generate the apo-GIST grid file using GISTTOOLS
 ## Introduction
 
 The main purpose of this exercise is to reproduce the apo-GIST analysis of gist-tutorial: https://github.com/liedllab/gist-tutorial
