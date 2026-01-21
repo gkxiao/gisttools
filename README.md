@@ -42,7 +42,9 @@ You should be able to install gisttools in a local environment using `pip instal
 
 https://github.com/liedllab/gist-tutorial
 
-## an example to export &Delta;G.dx file
+## a demo calculate &Delta;G and export to a dx file
+Here’s a full Python code example showing how to carry out this process. The code is based on the docs examples and has key comments included.
+
 ```
 # 导入GISTTOOLS包
 import sys
@@ -82,14 +84,13 @@ gist.save_dx('A_dens', 'deltaG_density.dx')
 print("DX文件已导出为 deltaG_density.dx")
 ```
 
-Should adjustments to the free energy calculation be necessary—for instance, the application of an entropy scaling factor of 0.6 (refer to Section 4.4.6)—please reconfigure the data columns prior to export.
+Should adjustments to the free energy calculation be necessary—for instance, the application of an entropy scaling factor of 0.6 (refer to GIST Tutorial Section 4.4.6)—please reconfigure the data columns prior to export.
 ```
 # 示例：缩放熵贡献（第一阶熵乘以0.6）
 gist['dTSsix_scaled_dens'] = gist['dTSsix_dens'] * 0.6
 gist['A_scaled_dens'] = gist['Esw_dens'] + gist['Eww_dens'] - gist['dTSsix_scaled_dens']
 gist.save_dx('A_scaled_dens', 'deltaG_scaled.dx')
 ```
-
 
 <h2>Reference</h2>
 <ol>
