@@ -41,7 +41,7 @@ You should be able to install gisttools in a local environment using `pip instal
 <h2>Tutorial</h2>
 
 https://github.com/liedllab/gist-tutorial
-
+<!--
 ## a demo to calculate &Delta;G and export to a dx file
 Here’s a full Python code example showing how to carry out this process. The code is based on the docs examples and has key comments included.
 
@@ -91,7 +91,7 @@ gist['dTSsix_scaled_dens'] = gist['dTSsix_dens'] * 0.6
 gist['A_scaled_dens'] = gist['Esw_dens'] + gist['Eww_dens'] - gist['dTSsix_scaled_dens']
 gist.save_dx('A_scaled_dens', 'deltaG_scaled.dx')
 ```
-
+-->
 <h2>Reference</h2>
 <ol>
    <li>Hu, B.; Lill, M. A. Protein Pharmacophore Selection Using Hydration-Site Analysis. J. Chem. Inf. Model. 2012, 52 (4), 1046–1060. https://doi.org/10.1021/ci200620h.</li>
