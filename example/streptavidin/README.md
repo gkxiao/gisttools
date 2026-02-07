@@ -19,4 +19,5 @@ python extract_frame.py
 ```
 python export_dg.py
 ```
-I have encountered an issue at present ： https://github.com/liedllab/gist-tutorial/issues/81
+I have encountered an issue at present ： https://github.com/liedllab/gist-tutorial/issues/81, which was solved in [issue 83](https://github.com/liedllab/gist-tutorial/issues/83)
+
